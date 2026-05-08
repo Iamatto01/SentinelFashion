@@ -21,9 +21,32 @@ const saveToStorage = (key, value) => {
 };
 
 // ========== Custom Hook: useStore ==========
+const initialWardrobe = [
+  { id: 'w1', name: 'Black Graphic Tee', category: 'tops', subcategory: 't-shirt', colors: ['#000000'], pattern: 'graphic', season: ['summer', 'all'], occasion: ['casual'], image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400', brand: 'Nike', wearCount: 12 },
+  { id: 'w2', name: 'Blue Denim Jacket', category: 'outerwear', subcategory: 'jacket', colors: ['#3b82f6'], pattern: 'solid', season: ['fall', 'spring'], occasion: ['casual'], image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400', brand: "Levi's", wearCount: 5 },
+  { id: 'w3', name: 'Slim Fit Chinos', category: 'bottoms', subcategory: 'pants', colors: ['#d1d5db'], pattern: 'solid', season: ['all'], occasion: ['casual', 'work'], image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400', brand: 'Uniqlo', wearCount: 8 },
+  { id: 'w4', name: 'White Sneakers', category: 'shoes', subcategory: 'sneakers', colors: ['#ffffff'], pattern: 'solid', season: ['all'], occasion: ['casual'], image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400', brand: 'Adidas', wearCount: 20 },
+  { id: 'w5', name: 'Silk Blouse', category: 'tops', subcategory: 'blouse', colors: ['#f472b6'], pattern: 'solid', season: ['spring', 'summer'], occasion: ['work', 'event'], image: 'https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=400', brand: 'Zara', wearCount: 3 },
+  { id: 'w6', name: 'Tailored Trousers', category: 'bottoms', subcategory: 'pants', colors: ['#000000'], pattern: 'solid', season: ['all'], occasion: ['work', 'event'], image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400', brand: 'H&M', wearCount: 15 },
+  { id: 'w7', name: 'Leather Boots', category: 'shoes', subcategory: 'boots', colors: ['#000000'], pattern: 'solid', season: ['fall', 'winter'], occasion: ['casual', 'work'], image: 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=400', brand: 'Dr. Martens', wearCount: 7 },
+  { id: 'w8', name: 'Silver Watch', category: 'accessories', subcategory: 'watch', colors: ['#e5e7eb'], pattern: 'solid', season: ['all'], occasion: ['casual', 'work', 'event'], image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400', brand: 'Fossil', wearCount: 50 },
+];
+
+const initialOutfits = [
+  { id: 'o1', name: 'Casual Weekend', items: ['w1', 'w2', 'w3', 'w4', 'w8'], rating: 4, wornCount: 5, aiScore: 85, lastWorn: new Date().toISOString() },
+  { id: 'o2', name: 'Office Ready', items: ['w5', 'w6', 'w7', 'w8'], rating: 5, wornCount: 12, aiScore: 92, lastWorn: new Date(Date.now() - 86400000).toISOString() },
+  { id: 'o3', name: 'Street Style', items: ['w1', 'w3', 'w4', 'w8'], rating: 3, wornCount: 2, aiScore: 78, lastWorn: new Date(Date.now() - 172800000).toISOString() }
+];
+
 export function useStore() {
-  const [wardrobe, setWardrobe] = useState(() => loadFromStorage('ss_wardrobe_v2', []));
-  const [outfits, setOutfits] = useState(() => loadFromStorage('ss_outfits_v2', []));
+  const [wardrobe, setWardrobe] = useState(() => {
+    const stored = loadFromStorage('ss_wardrobe_v2', null);
+    return stored && stored.length > 0 ? stored : initialWardrobe;
+  });
+  const [outfits, setOutfits] = useState(() => {
+    const stored = loadFromStorage('ss_outfits_v2', null);
+    return stored && stored.length > 0 ? stored : initialOutfits;
+  });
   const [history, setHistory] = useState(() => loadFromStorage('ss_history_v2', []));
   const [isDbReady, setIsDbReady] = useState(false);
   const [profile, setProfile] = useState(() => loadFromStorage('ss_profile_v2', {
