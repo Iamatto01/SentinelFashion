@@ -13,7 +13,7 @@ function App() {
   const store = useStore();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/SentinelFashion/">
       <div className="app-layout">
 
         <main className="page-content">
