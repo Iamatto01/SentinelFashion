@@ -65,7 +65,7 @@ export default function OnboardingPage({ store }) {
     <div className="onboarding-page page-enter">
       <div className="branding-header">
         <Sparkles className="brand-icon" size={24} />
-        <h1>StyleSentinel</h1>
+        <h1>People & co</h1>
       </div>
 
       <div className="onboarding-content">

@@ -4,15 +4,15 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/SentinelFashion/',
+  base: '/people-and-co/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        name: 'StyleSentinel AI Outfit Planner',
-        short_name: 'StyleSentinel',
+        name: 'People & co AI Outfit Planner',
+        short_name: 'People & co',
         description: 'Your AI-Powered Personal Fashion Stylist. Organize your wardrobe, get smart outfit suggestions, and virtually try on clothes.',
         theme_color: '#0a0a1a',
         background_color: '#0a0a1a',

@@ -1,6 +1,6 @@
 {
-  "name": "StyleSentinel AI Outfit Planner",
-  "short_name": "StyleSentinel",
+  "name": "People & co AI Outfit Planner",
+  "short_name": "People & co",
   "description": "Your AI-Powered Personal Fashion Stylist. Organize your wardrobe, get smart outfit suggestions, and virtually try on clothes.",
   "start_url": "/",
   "display": "standalone",

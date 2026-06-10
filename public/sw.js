@@ -1,4 +1,4 @@
-const CACHE_NAME = 'stylesentinel-v1';
+const CACHE_NAME = 'people-and-co-v1';
 const urlsToCache = [
   '/',
   '/index.html',

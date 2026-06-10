@@ -18,7 +18,7 @@ export async function askStylist(prompt, wardrobeContext) {
       messages: [
         {
           role: "system",
-          content: "You are StyleSentinel, an expert personal fashion AI. Keep your style advice punchy, modern, and highly actionable. Format your specific outfit suggestions clearly."
+          content: "You are People & co, an expert personal fashion AI. Keep your style advice punchy, modern, and highly actionable. Format your specific outfit suggestions clearly."
         },
         {
           role: "user",
