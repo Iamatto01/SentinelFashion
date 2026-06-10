@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/people-and-co/',
+  base: '/SentinelFashion/',
   plugins: [
     react(),
     VitePWA({
@@ -61,3 +61,4 @@ export default defineConfig({
     port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
   }
 });
+
