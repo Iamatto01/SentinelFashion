@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        name: 'People & co AI Outfit Planner',
-        short_name: 'People & co',
+        name: 'People & Co. AI Outfit Planner',
+        short_name: 'People & Co.',
         description: 'Your AI-Powered Personal Fashion Stylist. Organize your wardrobe, get smart outfit suggestions, and virtually try on clothes.',
         theme_color: '#0a0a1a',
         background_color: '#0a0a1a',
@@ -61,4 +61,5 @@ export default defineConfig({
     port: process.env.PORT ? parseInt(process.env.PORT) : 5173,
   }
 });
+
 

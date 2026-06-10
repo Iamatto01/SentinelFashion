@@ -18,7 +18,7 @@ export async function askStylist(prompt, wardrobeContext) {
       messages: [
         {
           role: "system",
-          content: "You are People & co, an expert personal fashion AI. Keep your style advice punchy, modern, and highly actionable. Format your specific outfit suggestions clearly."
+          content: "You are People & Co., an expert personal fashion AI. Keep your style advice punchy, modern, and highly actionable. Format your specific outfit suggestions clearly."
         },
         {
           role: "user",
@@ -36,3 +36,4 @@ export async function askStylist(prompt, wardrobeContext) {
     return "Sorry, I ran into an error generating your style advice. Please check your API key.";
   }
 }
+
