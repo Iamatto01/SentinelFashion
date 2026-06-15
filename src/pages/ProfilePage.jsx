@@ -164,10 +164,8 @@ export default function ProfilePage({ store }) {
               <li><Check size={14}/> Free sync calendar wardrobe up to 30 items</li>
               <li><Check size={14}/> Smart weather recommendations</li>
             </ul>
-            {store.profile.subscriptionTier !== 'free' ? (
-              <button className="sub-btn sub-btn-ghost" onClick={() => handleUpgrade('free')}>Downgrade</button>
-            ) : (
-              <span className="sub-current-label">Current Plan</span>
+            {store.profile.subscriptionTier === 'free' && (
+              <span className="sub-current-label">Current Tier</span>
             )}
           </div>
 
