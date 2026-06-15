@@ -161,7 +161,7 @@ export default function ProfilePage({ store }) {
               <span className="sub-price">RM 0.00</span>
             </div>
             <ul className="sub-features">
-              <li><Check size={14}/> Visual cataloging up to 30 items</li>
+              <li><Check size={14}/> Free sync calendar wardrobe up to 30 items</li>
               <li><Check size={14}/> Smart weather recommendations</li>
             </ul>
             {store.profile.subscriptionTier !== 'free' ? (
@@ -178,12 +178,12 @@ export default function ProfilePage({ store }) {
               <span className="sub-price">RM 2.90<small>/mo</small></span>
             </div>
             <ul className="sub-features">
-              <li><Check size={14}/> Everything in Free</li>
-              <li><Check size={14}/> Seasonal style reports</li>
-              <li><Check size={14}/> Priority AI Stylist</li>
+              <li><Check size={14}/> More advance AI</li>
+              <li><Check size={14}/> Unlimited wardrobe</li>
+              <li><Check size={14}/> Virtual try-on feature</li>
             </ul>
             {store.profile.subscriptionTier !== 'premium-monthly' ? (
-              <button className="sub-btn sub-btn-primary" onClick={() => handleUpgrade('premium-monthly')}>Upgrade</button>
+              <button className="sub-btn sub-btn-primary" onClick={() => handleUpgrade('premium-monthly')}>Purchase Plan</button>
             ) : (
               <span className="sub-current-label">Current Plan</span>
             )}
@@ -196,12 +196,12 @@ export default function ProfilePage({ store }) {
               <span className="sub-price">RM 9.90<small> once</small></span>
             </div>
             <ul className="sub-features">
-              <li><Check size={14}/> Unlimited uploads</li>
-              <li><Check size={14}/> Calendar sync & Virtual Try-On</li>
-              <li><Check size={14}/> Lifetime updates</li>
+              <li><Check size={14}/> All premium plan features</li>
+              <li><Check size={14}/> One time purchase for lifetime</li>
+              <li><Check size={14}/> Priority support</li>
             </ul>
             {store.profile.subscriptionTier !== 'premium-lifetime' ? (
-              <button className="sub-btn sub-btn-gold" onClick={() => handleUpgrade('premium-lifetime')}>Get Lifetime</button>
+              <button className="sub-btn sub-btn-gold" onClick={() => handleUpgrade('premium-lifetime')}>Purchase Lifetime Plan</button>
             ) : (
               <span className="sub-current-label">Current Plan</span>
             )}
