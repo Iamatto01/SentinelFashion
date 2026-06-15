@@ -52,7 +52,8 @@ export function useStore() {
   const [profile, setProfile] = useState(() => loadFromStorage('ss_profile_v2', {
     name: 'Sarah',
     stylePersona: 'Modern Glass',
-    preferences: { formalitySplit: 40, colorfulness: 50, trendiness: 60 }
+    preferences: { formalitySplit: 40, colorfulness: 50, trendiness: 60 },
+    subscriptionTier: 'free', // 'free', 'premium-monthly', 'premium-lifetime'
   }));
 
   // Initialize Turso DB
